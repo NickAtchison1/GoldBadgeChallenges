@@ -31,7 +31,7 @@ namespace _06_KomodoGreenPlan.Repository.Repositories
             return _gasCars.FirstOrDefault(x => x.GasCarID == id);
         }
 
-        public void UpdateGasCar(GasCar gasCar)
+        public void UpdateGasCar( GasCar gasCar)
         {
             var carToUpdate = GetGasCarById(gasCar.GasCarID);
             if (carToUpdate != null)

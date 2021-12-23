@@ -122,7 +122,62 @@ namespace _06_KomodoGreenPlan.UI
 
         private void UpdateGasCar()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Gas Car Update View");
+            Console.Write("Enter the ID of the Car you would like to update: ");
+            int carId = Convert.ToInt32(Console.ReadLine());
+            var carToView = _gasCarRepository.GetGasCarById(carId);
+            Console.WriteLine("\n");
+            Console.WriteLine($"ID: {carToView.GasCarID}\n" +
+                $"Make: {carToView.Make} \n" +
+                $"Model {carToView.Model}\n" +
+                $"Year: {carToView.ModelYear}\n" +
+                $"Value: {carToView.CarValue}\n" +
+                $"MPG: {carToView.MPG}\n" +
+                $"Fuel Tank Capacity(gal): {carToView.FuelTankCapacity}\n");
+            WaitForKey();
+
+            Console.WriteLine("Please make changes to this car. Please fill in the original data on the field if no changes are needed\n");
+            Console.Write("Make? ");
+            carToView.Make = Console.ReadLine();
+            Console.Write("Model? ");
+            carToView.Model = Console.ReadLine();
+            Console.Write("Year? ");
+            carToView.ModelYear = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Value? ");
+            carToView.CarValue = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("MPG? ");
+            carToView.MPG = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Fuel Tank Capcity (In Gallons)? ");
+            carToView.FuelTankCapacity = Convert.ToDouble(Console.ReadLine());
+
+            bool isRunning = true;
+            while (isRunning)
+            {
+                Console.WriteLine("Updates have been applied. Do you want to save your changes? (y/n)?\n");
+
+                string userChoice = Console.ReadLine().ToLower(); ;
+                switch (userChoice)
+                {
+                    case "y":
+                        Console.WriteLine("Saving Changes!\n");
+                        _gasCarRepository.UpdateGasCar(carToView);
+                        isRunning = false;
+
+                        break;
+                    case "n":
+                        Console.WriteLine("Update cancelled. Returning to the Gas Cars Menu.");
+                        isRunning = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Selection.");
+                        WaitForKey();
+                        break;
+
+
+                }
+                WaitForKey();
+            }
         }
 
         private void DeleteGasCar()
@@ -157,7 +212,7 @@ namespace _06_KomodoGreenPlan.UI
                         isRunning = false;
                         break;
                     case "n":
-                        Console.WriteLine("Car has not been deleted. Returning to the Main Menu.");
+                        Console.WriteLine("Car has not been deleted. Returning to the Gas Cars Menu.");
                         isRunning = false;
                         break;
                     default:
@@ -313,7 +368,7 @@ namespace _06_KomodoGreenPlan.UI
                         isRunning = false;
                         break;
                     case "n":
-                        Console.WriteLine("Car has not been deleted. Returning to the Main Menu.");
+                        Console.WriteLine("Car has not been deleted. Returning to the Hybrid Cars Menu.");
                         isRunning = false;
                         break;
                     default:
@@ -329,7 +384,69 @@ namespace _06_KomodoGreenPlan.UI
 
         private void UpdateHybridCar()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Hybrid Car Update View");
+            Console.Write("Enter the ID of the Car you would like to update: ");
+            int carId = Convert.ToInt32(Console.ReadLine());
+            var carToView = _hybridCarRepository.GetHybridCarById(carId);
+            Console.WriteLine("\n");
+            Console.WriteLine($"ID: {carToView.HybridCarID}\n" +
+                $"Make: {carToView.Make} \n" +
+                $"Model {carToView.Model}\n" +
+                $"Year: {carToView.ModelYear}\n" +
+                $"Value: {carToView.CarValue}\n" +
+                $"MPG: {carToView.MPG}\n" +
+                $"Fuel Tank Capacity(gal): {carToView.FuelTankCapacity}\n" +
+                $"Range (In Miles): {carToView.RangePerFullCharge}\n" +
+                $"Full Charge Time (In Hours): {carToView.ChargingTime}\n");
+            WaitForKey();
+
+            Console.WriteLine("Please make changes to this car. Please fill in the original data on the field if no changes are needed\n");
+            Console.Write("Make? ");
+            carToView.Make = Console.ReadLine();
+            Console.Write("Model? ");
+            carToView.Model = Console.ReadLine();
+            Console.Write("Year? ");
+            carToView.ModelYear = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Value? ");
+            carToView.CarValue = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("MPG? ");
+            carToView.MPG = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Fuel Tank Capcity (In Gallons)? ");
+            carToView.FuelTankCapacity = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Range (In Miles)? ");
+            carToView.RangePerFullCharge = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Charging Time (In hours? ");
+            carToView.ChargingTime = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("\n");
+           
+            bool isRunning = true;
+            while (isRunning)
+            {
+                Console.WriteLine("Updates have been applied. Do you want to save your changes? (y/n)?\n");
+
+                string userChoice = Console.ReadLine().ToLower(); ;
+                switch (userChoice)
+                {
+                    case "y":
+                        Console.WriteLine("Saving Changes!\n");
+                        _hybridCarRepository.UpdateHybridCar(carToView);
+                        isRunning = false;
+
+                        break;
+                    case "n":
+                        Console.WriteLine("Update cancelled. Returning to the Hybrid Cars Menu.");
+                        isRunning = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Selection.");
+                        WaitForKey();
+                        break;
+
+
+                }
+                WaitForKey();
+            }
         }
 
         private void AddHybridCar()
@@ -501,7 +618,7 @@ namespace _06_KomodoGreenPlan.UI
 
                         break;
                     case "n":
-                        Console.WriteLine("Car has not been deleted. Returning to the Main Menu.");
+                        Console.WriteLine("Car has not been deleted. Returning to the Electric Cars Menu.");
                         isRunning = false;
                         break;
                     default:
@@ -517,7 +634,63 @@ namespace _06_KomodoGreenPlan.UI
 
         private void UpdateElectricCar()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Electric Car Update View");
+            Console.Write("Enter the ID of the Car you would like to update: ");
+            int carId = Convert.ToInt32(Console.ReadLine());
+            var carToView = _electricCarRepository.GetElectricCarById(carId);
+            Console.WriteLine("\n");
+            Console.WriteLine($"ID: {carToView.ElectricCarID}\n" +
+                $"Make: {carToView.Make} \n" +
+                $"Model {carToView.Model}\n" +
+                $"Year: {carToView.ModelYear}\n" +
+                $"Value: {carToView.CarValue}\n" +
+                $"Range (In Miles): {carToView.RangePerFullCharge}\n" +
+                $"Full Charge Time (In Hours): {carToView.ChargingTime}\n");
+            WaitForKey();
+
+            Console.WriteLine("Please make changes to this car. Please fill in the original data on the field if no changes are needed\n");
+            Console.Write("Make? ");
+            carToView.Make = Console.ReadLine();
+            Console.Write("Model? ");
+            carToView.Model = Console.ReadLine();
+            Console.Write("Year? ");
+            carToView.ModelYear = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Value? ");
+            carToView.CarValue = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Range (In Miles)? ");
+            carToView.RangePerFullCharge = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Charging Time (In hours? ");
+            carToView.ChargingTime = Convert.ToDouble(Console.ReadLine());
+
+
+            bool isRunning = true;
+            while (isRunning)
+            {
+                Console.WriteLine("Updates have been applied. Do you want to save your changes? (y/n)?\n");
+
+                string userChoice = Console.ReadLine().ToLower(); ;
+                switch (userChoice)
+                {
+                    case "y":
+                        Console.WriteLine("Saving Changes!\n");
+                        _electricCarRepository.UpdateElectricCar(carToView);
+                        isRunning = false;
+
+                        break;
+                    case "n":
+                        Console.WriteLine("Update cancelled. Returning to the Electric Cars Menu.");
+                        isRunning = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Selection.");
+                        WaitForKey();
+                        break;
+
+
+                }
+                WaitForKey();
+            }
         }
 
         private void ViewElectricCarDetail()
@@ -558,7 +731,7 @@ namespace _06_KomodoGreenPlan.UI
                     $"{cars.RangePerFullCharge} | " +
                     $"{cars.ChargingTime}\n");
             }
-
+           
             WaitForKey();
         }
            
