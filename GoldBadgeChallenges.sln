@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_KomodoCafe.Repository", "01_KomodoCafe.Repository\01_KomodoCafe.Repository.csproj", "{0AC1CA75-0B3A-46FB-918B-D4597EC483A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Komodocafe.UI", "01_Komodocafe.UI\01_Komodocafe.UI.csproj", "{62E968C9-A44D-4266-8A54-1889CEF56A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_KomodoClaims.Repository", "02_KomodoClaims.Repository\02_KomodoClaims.Repository.csproj", "{A48B2243-6552-4846-86CB-01B88AE89C10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_KomodoClaims.UI", "KomodoClaims.UI\02_KomodoClaims.UI.csproj", "{A3C39864-F8D4-4C88-B1B8-1B25962089CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_KomodoGreenPlan.Repository", "06_KomodoGreenPlan.Repository\06_KomodoGreenPlan.Repository.csproj", "{2E5B61D8-E9D5-4004-8FAA-B92FC03DD1D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_KomodoGreenPlan.UI", "06_KomodoGreenPlan.UI\06_KomodoGreenPlan.UI.csproj", "{354F3DF9-BC27-49C2-BBF1-26725ABB8D4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AC1CA75-0B3A-46FB-918B-D4597EC483A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC1CA75-0B3A-46FB-918B-D4597EC483A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC1CA75-0B3A-46FB-918B-D4597EC483A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC1CA75-0B3A-46FB-918B-D4597EC483A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E968C9-A44D-4266-8A54-1889CEF56A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E968C9-A44D-4266-8A54-1889CEF56A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E968C9-A44D-4266-8A54-1889CEF56A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E968C9-A44D-4266-8A54-1889CEF56A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48B2243-6552-4846-86CB-01B88AE89C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48B2243-6552-4846-86CB-01B88AE89C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48B2243-6552-4846-86CB-01B88AE89C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48B2243-6552-4846-86CB-01B88AE89C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C39864-F8D4-4C88-B1B8-1B25962089CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C39864-F8D4-4C88-B1B8-1B25962089CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C39864-F8D4-4C88-B1B8-1B25962089CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C39864-F8D4-4C88-B1B8-1B25962089CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E5B61D8-E9D5-4004-8FAA-B92FC03DD1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E5B61D8-E9D5-4004-8FAA-B92FC03DD1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E5B61D8-E9D5-4004-8FAA-B92FC03DD1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E5B61D8-E9D5-4004-8FAA-B92FC03DD1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{354F3DF9-BC27-49C2-BBF1-26725ABB8D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354F3DF9-BC27-49C2-BBF1-26725ABB8D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354F3DF9-BC27-49C2-BBF1-26725ABB8D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354F3DF9-BC27-49C2-BBF1-26725ABB8D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6894C519-AF33-4A88-BF4C-EBFDF8CD5966}
+	EndGlobalSection
+EndGlobal
